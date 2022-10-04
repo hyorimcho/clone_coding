@@ -1,0 +1,24 @@
+.navigator {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5%;
+}
+.navigator .nav_logo {
+  margin: 1px 0 0;
+  padding: 16px 6px 16px 10px;
+}
+.navigator .nav_logo img {
+  width: 108px;
+  height: 23px;
+  margin: -3px 0 0;
+}
+.navigator .menu_items {
+  display: flex;
+  align-items: center;
+}
+.navigator .menu_items li {
+  padding: 16px 8px 10px;
+}
+.navigator .actions {
+  display: flex;
+}

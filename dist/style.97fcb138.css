@@ -1,6 +1,9 @@
+body {
+  line-height: 1.5;
+  font-weight: 400; }
+
 a {
-  text-decoration: none;
-  color: black; }
+  text-decoration: none; }
 
 .navigator {
   display: flex;
@@ -17,13 +20,16 @@ a {
     font-size: 13px; }
     .navigator .menu_items li {
       padding: 16px 8px 10px; }
+      .navigator .menu_items li a {
+        color: #262626; }
   .navigator img {
     width: 108px;
     height: 23px;
     margin: -3px 0 0; }
   .navigator .actions {
-    display: flex;
-    justify-content: flex-end; }
+    display: flex; }
+    .navigator .actions a {
+      color: #262626; }
     .navigator .actions .ms_all_nav {
       font-size: 15px; }
     .navigator .actions .shopping_cart {
@@ -33,18 +39,20 @@ a {
 
 .main_image {
   cursor: pointer; }
-  .main_image .swiper-container .swiper-wrapper .swiper-slide {
-    transition: opacity 1s; }
-
-.main_image .swiper-pagination {
-  bottom: 40px;
-  left: 0;
-  right: 0; }
-  .main_image .swiper-pagination .swiper-pagination-bullet {
-    width: 12px;
-    height: 12px;
-    margin-right: 6px;
-    outline: none; }
+  .main_image .main-image-text h1 {
+    font-size: 29px;
+    font-weight: 600; }
+    .main_image .main-image-text h1 .shopping-btn {
+      outline: none; }
+  .main_image .swiper-pagination {
+    bottom: 40px;
+    left: 0;
+    right: 0; }
+    .main_image .swiper-pagination .swiper-pagination-bullet {
+      width: 12px;
+      height: 12px;
+      margin-right: 6px;
+      outline: none; }
 
 .link_list ul {
   display: flex;
@@ -90,18 +98,55 @@ a {
 .card_layout card {
   margin-bottom: 16; }
 
-.container {
-  margin: 0 0.013px;
-  padding: 0 75px; }
-
-.business_container {
+.business_card_layout {
   margin: 48px; }
-  .business_container .business_card {
+  .business_card_layout .business_card_title {
+    font-weight: 600;
+    line-height: 1.2; }
+  .business_card_layout .inner {
+    padding: 75px;
+    display: flex;
+    justify-content: center; }
+    .business_card_layout .inner .card {
+      padding: 0 15px; }
+      .business_card_layout .inner .card .badge {
+        background-color: #ffb900;
+        display: inline-block;
+        font-weight: 600;
+        line-height: 1; }
+      .business_card_layout .inner .card h2 {
+        font-size: 29px;
+        font-weight: 600;
+        margin: 16px 0; }
+      .business_card_layout .inner .card p {
+        line-height: 1.5; }
+      .business_card_layout .inner .card .footer {
+        background-color: transparent;
+        margin: 16px 0 0 0; }
+        .business_card_layout .inner .card .footer a {
+          color: #0067b8;
+          font-weight: 700; }
+  .business_card_layout .business_card {
     display: flex; }
-    .business_container .business_card .card_body {
+    .business_card_layout .business_card .card_body {
       display: flex;
       width: 350px;
       height: 440px; }
+  .business_card_layout .card_img {
+    width: 320px;
+    height: 180px; }
+  .business_card_layout h2 {
+    font-size: 29px;
+    font-weight: 600;
+    margin: 16px 0; }
+  .business_card_layout p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5; }
+
+.container {
+  margin: 0 0.013px;
+  padding: 0 75px; }
 
 .follow_request {
   display: flex;

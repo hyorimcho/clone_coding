@@ -2,16 +2,13 @@ body {
   line-height: 1.5;
   font-weight: 400; }
 
-a {
-  text-decoration: none; }
-
 .navigator {
+  width: 1500px;
   display: flex;
-  justify-content: space-between;
-  padding: 0 5%; }
+  padding: 0 0 0 8%; }
   .navigator .nav_logo {
     margin: 1px 0 0;
-    padding: 16px 6px 16px 10px; }
+    padding: 16px 22px 16px 10px; }
   .navigator .menu_items {
     width: 826px;
     padding-bottom: 8px;
@@ -21,14 +18,17 @@ a {
     .navigator .menu_items li {
       padding: 16px 8px 10px; }
       .navigator .menu_items li a {
-        color: #262626; }
+        color: #262626;
+        text-decoration: none; }
   .navigator img {
     width: 108px;
     height: 23px;
     margin: -3px 0 0; }
   .navigator .actions {
-    display: flex; }
+    display: flex;
+    margin-left: 0; }
     .navigator .actions a {
+      text-decoration: none;
       color: #262626; }
     .navigator .actions .ms_all_nav {
       font-size: 15px; }
@@ -38,21 +38,44 @@ a {
       font-size: 13px; }
 
 .main_image {
-  cursor: pointer; }
-  .main_image .main-image-text h1 {
-    font-size: 29px;
-    font-weight: 600; }
-    .main_image .main-image-text h1 .shopping-btn {
-      outline: none; }
+  height: 700px;
+  width: 100%;
+  position: relative; }
+  .main_image .main-image-text {
+    width: 440px;
+    z-index: 1;
+    left: 200px;
+    position: absolute;
+    top: 140px;
+    cursor: pointer; }
+    .main_image .main-image-text h1 {
+      font-size: 32px;
+      font-weight: 600;
+      margin-bottom: 20px; }
+    .main_image .main-image-text p {
+      font-size: 16px;
+      margin-bottom: 20px; }
+    .main_image .main-image-text .shopping-btn {
+      outline: none;
+      padding: 8px 16px;
+      background-color: #0067b8;
+      color: white;
+      border: 0px;
+      border-radius: 2px;
+      font-weight: 600;
+      cursor: pointer; }
   .main_image .swiper-pagination {
     bottom: 40px;
     left: 0;
     right: 0; }
     .main_image .swiper-pagination .swiper-pagination-bullet {
-      width: 12px;
-      height: 12px;
-      margin-right: 6px;
-      outline: none; }
+      width: 10px;
+      height: 10px;
+      border: 1px solid black;
+      background-color: black !important;
+      margin: 0 12px; }
+  .main_image .swiper-pagination-bullet:last-child {
+    margin-right: 0; }
 
 .link_list ul {
   display: flex;
@@ -61,10 +84,10 @@ a {
   .link_list ul li {
     margin: 16px 24px;
     font-weight: 600; }
+    .link_list ul li .link-img {
+      text-align: center; }
     .link_list ul li a {
       color: #0067b8; }
-    .link_list ul li img {
-      padding: 0 auto; }
 
 .card_layout .inner {
   padding: 75px;
@@ -72,37 +95,43 @@ a {
   justify-content: center; }
   .card_layout .inner .card {
     padding: 0 15px; }
+    .card_layout .inner .card h2 {
+      font-size: 29px;
+      font-weight: 600;
+      margin-top: 30px; }
     .card_layout .inner .card p {
       line-height: 1.5; }
     .card_layout .inner .card .footer {
       background-color: transparent;
       margin: 16px 0 0 0; }
       .card_layout .inner .card .footer a {
+        text-decoration: none;
         color: #0067b8;
         font-weight: 700; }
 
 .card_layout .card_img {
   width: 320px;
   height: 180px; }
-
-.card_layout h2 {
-  font-size: 29px;
-  font-weight: 600;
-  margin: 16px 0; }
-
-.card_layout p {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5; }
-
-.card_layout card {
-  margin-bottom: 16; }
+  .card_layout .card_img h2 {
+    font-size: 29px;
+    font-weight: 600;
+    margin: 16px 0; }
+  .card_layout .card_img p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5; }
+  .card_layout .card_img card {
+    margin-bottom: 16; }
 
 .business_card_layout {
   margin: 48px; }
   .business_card_layout .business_card_title {
     font-weight: 600;
-    line-height: 1.2; }
+    line-height: 1.2;
+    font-size: 35px;
+    position: relative;
+    top: 20px;
+    left: 30px; }
   .business_card_layout .inner {
     padding: 75px;
     display: flex;
@@ -113,11 +142,15 @@ a {
         background-color: #ffb900;
         display: inline-block;
         font-weight: 600;
-        line-height: 1; }
+        line-height: 1;
+        padding: 8px 12px;
+        position: relative;
+        top: 30px;
+        left: -325px; }
       .business_card_layout .inner .card h2 {
         font-size: 29px;
         font-weight: 600;
-        margin: 16px 0; }
+        margin-top: 30px; }
       .business_card_layout .inner .card p {
         line-height: 1.5; }
       .business_card_layout .inner .card .footer {
@@ -125,7 +158,8 @@ a {
         margin: 16px 0 0 0; }
         .business_card_layout .inner .card .footer a {
           color: #0067b8;
-          font-weight: 700; }
+          font-weight: 700;
+          text-decoration: none; }
   .business_card_layout .business_card {
     display: flex; }
     .business_card_layout .business_card .card_body {
@@ -144,9 +178,34 @@ a {
     font-weight: 400;
     line-height: 1.5; }
 
-.container {
-  margin: 0 0.013px;
-  padding: 0 75px; }
+.one-container {
+  position: relative;
+  cursor: pointer; }
+  .one-container .card-background {
+    width: 100%;
+    margin: 0 0.013px;
+    padding: 0 75px; }
+  .one-container .card-text {
+    z-index: 1;
+    width: 440px;
+    left: 200px;
+    position: absolute;
+    top: 140px; }
+    .one-container .card-text h1 {
+      font-size: 32px;
+      font-weight: 600;
+      margin-bottom: 20px; }
+    .one-container .card-text p {
+      font-size: 16px;
+      margin-bottom: 20px; }
+    .one-container .card-text .onedrive-btn {
+      outline: none;
+      padding: 8px 16px;
+      background-color: #0067b8;
+      color: white;
+      border: 0px;
+      border-radius: 2px;
+      font-weight: 600; }
 
 .follow_request {
   display: flex;
@@ -163,7 +222,8 @@ a {
   .move_top .move_top_btn {
     font-weight: 600;
     padding: 10px 12px;
-    outline: none;
+    border: 0px;
+    border-radius: 2px;
     line-height: 1;
     cursor: pointer;
     font-size: 16px; }

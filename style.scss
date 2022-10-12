@@ -2,16 +2,13 @@ body {
   line-height: 1.5;
   font-weight: 400;
 }
-a {
-  text-decoration: none;
-}
 .navigator {
+  width: 1500px;
   display: flex;
-  justify-content: space-between;
-  padding: 0 5%;
+  padding: 0 0 0 8%;
   .nav_logo {
     margin: 1px 0 0;
-    padding: 16px 6px 16px 10px;
+    padding: 16px 22px 16px 10px;
   }
   .menu_items {
     width: 826px;
@@ -23,6 +20,7 @@ a {
       padding: 16px 8px 10px;
       a {
         color: #262626;
+        text-decoration: none;
       }
     }
   }
@@ -32,10 +30,12 @@ a {
     margin: -3px 0 0;
   }
   .actions {
+    display: flex;
+    margin-left: 0;
     a {
+      text-decoration: none;
       color: #262626;
     }
-    display: flex;
     .ms_all_nav {
       font-size: 15px;
     }
@@ -48,29 +48,56 @@ a {
   }
 }
 .main_image {
-  .main-image-text {
-    h1 {
-      font-size: 29px;
-      font-weight: 600;
-      .shopping-btn {
-        outline: none;
-      }
+  height: 700px;
+  width: 100%;
+  position: relative;
+  .swiper-container {
+    .swiper-wrapper {
     }
   }
-  cursor: pointer;
+  .main-image-text {
+    width: 440px;
+    z-index: 1;
+    left: 200px;
+    position: absolute;
+    top: 140px;
+    cursor: pointer;
+    h1 {
+      font-size: 32px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    .shopping-btn {
+      outline: none;
+      padding: 8px 16px;
+      background-color: #0067b8;
+      color: white;
+      border: 0px;
+      border-radius: 2px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  }
   .swiper-pagination {
     bottom: 40px;
     left: 0;
     right: 0;
     .swiper-pagination-bullet {
-      width: 12px;
-      height: 12px;
-      margin-right: 6px;
-      outline: none;
+      width: 10px;
+      height: 10px;
+      border: 1px solid black;
+      background-color: black !important;
+      margin: 0 12px;
     }
   }
+  .swiper-pagination-bullet:last-child {
+    margin-right: 0;
+  }
 }
-
 .link_list {
   ul {
     display: flex;
@@ -79,16 +106,15 @@ a {
     li {
       margin: 16px 24px;
       font-weight: 600;
+      .link-img {
+        text-align: center;
+      }
       a {
         color: #0067b8;
-      }
-      img {
-        padding: 0 auto;
       }
     }
   }
 }
-
 .card_layout {
   .inner {
     padding: 75px;
@@ -96,6 +122,11 @@ a {
     justify-content: center;
     .card {
       padding: 0 15px;
+      h2 {
+        font-size: 29px;
+        font-weight: 600;
+        margin-top: 30px;
+      }
       p {
         line-height: 1.5;
       }
@@ -103,6 +134,7 @@ a {
         background-color: transparent;
         margin: 16px 0 0 0;
         a {
+          text-decoration: none;
           color: #0067b8;
           font-weight: 700;
         }
@@ -112,19 +144,19 @@ a {
   .card_img {
     width: 320px;
     height: 180px;
-  }
-  h2 {
-    font-size: 29px;
-    font-weight: 600;
-    margin: 16px 0;
-  }
-  p {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.5;
-  }
-  card {
-    margin-bottom: 16;
+    h2 {
+      font-size: 29px;
+      font-weight: 600;
+      margin: 16px 0;
+    }
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+    card {
+      margin-bottom: 16;
+    }
   }
 }
 .business_card_layout {
@@ -132,6 +164,10 @@ a {
   .business_card_title {
     font-weight: 600;
     line-height: 1.2;
+    font-size: 35px;
+    position: relative;
+    top: 20px;
+    left: 30px;
   }
   .inner {
     padding: 75px;
@@ -144,11 +180,15 @@ a {
         display: inline-block;
         font-weight: 600;
         line-height: 1;
+        padding: 8px 12px;
+        position: relative;
+        top: 30px;
+        left: -325px;
       }
       h2 {
         font-size: 29px;
         font-weight: 600;
-        margin: 16px 0;
+        margin-top: 30px;
       }
       p {
         line-height: 1.5;
@@ -159,6 +199,7 @@ a {
         a {
           color: #0067b8;
           font-weight: 700;
+          text-decoration: none;
         }
       }
     }
@@ -186,9 +227,40 @@ a {
     line-height: 1.5;
   }
 }
-.container {
-  margin: 0 0.013px;
-  padding: 0 75px;
+
+.one-container {
+  position: relative;
+  cursor: pointer;
+  .card-background {
+    width: 100%;
+    margin: 0 0.013px;
+    padding: 0 75px;
+  }
+  .card-text {
+    z-index: 1;
+    width: 440px;
+    left: 200px;
+    position: absolute;
+    top: 140px;
+    h1 {
+      font-size: 32px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    .onedrive-btn {
+      outline: none;
+      padding: 8px 16px;
+      background-color: #0067b8;
+      color: white;
+      border: 0px;
+      border-radius: 2px;
+      font-weight: 600;
+    }
+  }
 }
 .follow_request {
   display: flex;
@@ -208,7 +280,8 @@ a {
   .move_top_btn {
     font-weight: 600;
     padding: 10px 12px;
-    outline: none;
+    border: 0px;
+    border-radius: 2px;
     line-height: 1;
     cursor: pointer;
     font-size: 16px;

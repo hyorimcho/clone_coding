@@ -9,6 +9,11 @@ body {
   .nav_logo {
     margin: 1px 0 0;
     padding: 16px 22px 16px 10px;
+    img {
+      width: 108px;
+      height: 23px;
+      margin: -3px 0 0;
+    }
   }
   .menu_items {
     width: 826px;
@@ -17,51 +22,62 @@ body {
     align-items: center;
     font-size: 13px;
     li {
-      padding: 16px 8px 10px;
+      padding: 16px 14px 10px;
       a {
         color: #262626;
         text-decoration: none;
       }
     }
-  }
-  img {
-    width: 108px;
-    height: 23px;
-    margin: -3px 0 0;
+    li:hover {
+      margin-bottom: 1px;
+      text-decoration: underline 2px;
+    }
   }
   .actions {
     display: flex;
-    margin-left: 0;
+    padding-left: 150px;
+    padding-top: 12px;
+    font-size: 13px;
     a {
       text-decoration: none;
       color: #262626;
     }
+    a:hover {
+      text-decoration: underline 2px;
+    }
     .ms_all_nav {
-      font-size: 15px;
+      padding-right: 16px;
     }
     .shopping_cart {
-      font-size: 13px;
+      padding-right: 16px;
     }
     .login {
-      font-size: 13px;
+      display: flex;
     }
   }
 }
 .main_image {
-  height: 700px;
-  width: 100%;
-  position: relative;
-  .swiper-container {
-    .swiper-wrapper {
-    }
+  height: 600px;
+  transition-duration: 1s;
+  .main_background {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
   }
-  .main-image-text {
-    width: 440px;
-    z-index: 1;
-    left: 200px;
-    position: absolute;
-    top: 140px;
+  .inner-text {
+    position: relative;
+    width: 600px;
+    left: 1150px;
+    top: -400px;
     cursor: pointer;
+    .badge {
+      background-color: #ffb900;
+      display: inline-block;
+      font-weight: 600;
+      line-height: 1;
+      padding: 8px 12px;
+    }
     h1 {
       font-size: 32px;
       font-weight: 600;
@@ -71,7 +87,12 @@ body {
       font-size: 16px;
       margin-bottom: 20px;
     }
-    .shopping-btn {
+
+    .main-image-btn {
+      a {
+        text-decoration: none;
+        color: white;
+      }
       outline: none;
       padding: 8px 16px;
       background-color: #0067b8;
@@ -80,22 +101,11 @@ body {
       border-radius: 2px;
       font-weight: 600;
       cursor: pointer;
+      font-size: 15px;
     }
-  }
-  .swiper-pagination {
-    bottom: 40px;
-    left: 0;
-    right: 0;
-    .swiper-pagination-bullet {
-      width: 10px;
-      height: 10px;
-      border: 1px solid black;
-      background-color: black !important;
-      margin: 0 12px;
+    .main-image-btn:hover {
+      background-color: #015fa7;
     }
-  }
-  .swiper-pagination-bullet:last-child {
-    margin-right: 0;
   }
 }
 .link_list {
@@ -116,12 +126,24 @@ body {
   }
 }
 .card_layout {
+  width: 90%;
+  height: 600px;
+  margin: 0 auto;
   .inner {
     padding: 75px;
     display: flex;
     justify-content: center;
     .card {
       padding: 0 15px;
+      position: relative;
+      .badge {
+        background-color: #ffb900;
+        display: inline-block;
+        font-weight: 600;
+        line-height: 1;
+        padding: 8px 12px;
+        position: relative;
+      }
       h2 {
         font-size: 29px;
         font-weight: 600;
@@ -137,6 +159,12 @@ body {
           text-decoration: none;
           color: #0067b8;
           font-weight: 700;
+        }
+      }
+      .footer {
+        a :hover {
+          transform: translateX(10px);
+          transition: 0.2s;
         }
       }
     }
@@ -154,13 +182,12 @@ body {
       font-weight: 400;
       line-height: 1.5;
     }
-    card {
-      margin-bottom: 16;
-    }
   }
 }
 .business_card_layout {
-  margin: 48px;
+  width: 90%;
+  height: 650px;
+  margin: 0 auto;
   .business_card_title {
     font-weight: 600;
     line-height: 1.2;
@@ -170,11 +197,13 @@ body {
     left: 30px;
   }
   .inner {
-    padding: 75px;
+    padding: 75px 0 0 0;
     display: flex;
     justify-content: center;
     .card {
       padding: 0 15px;
+      width: 320px;
+      height: 180px;
       .badge {
         background-color: #ffb900;
         display: inline-block;
@@ -182,8 +211,10 @@ body {
         line-height: 1;
         padding: 8px 12px;
         position: relative;
-        top: 30px;
-        left: -325px;
+      }
+      img {
+        width: 320px;
+        height: 180px;
       }
       h2 {
         font-size: 29px;
@@ -191,53 +222,45 @@ body {
         margin-top: 30px;
       }
       p {
+        font-size: 16px;
+        font-weight: 400;
         line-height: 1.5;
       }
       .footer {
         background-color: transparent;
         margin: 16px 0 0 0;
         a {
+          text-decoration: none;
           color: #0067b8;
           font-weight: 700;
-          text-decoration: none;
+        }
+      }
+      .card_img {
+        width: 320px;
+        height: 180px;
+        h2 {
+          font-size: 29px;
+          font-weight: 600;
+          margin: 16px 0;
+        }
+        p {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 1.5;
         }
       }
     }
   }
-  .business_card {
-    display: flex;
-    .card_body {
-      display: flex;
-      width: 350px;
-      height: 440px;
-    }
-  }
-  .card_img {
-    width: 320px;
-    height: 180px;
-  }
-  h2 {
-    font-size: 29px;
-    font-weight: 600;
-    margin: 16px 0;
-  }
-  p {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.5;
-  }
 }
-
 .one-container {
   position: relative;
   cursor: pointer;
+  // margin: 0 auto;
+  padding: 0 150px;
   .card-background {
-    width: 100%;
     margin: 0 0.013px;
-    padding: 0 75px;
   }
   .card-text {
-    z-index: 1;
     width: 440px;
     left: 200px;
     position: absolute;
@@ -259,12 +282,17 @@ body {
       border: 0px;
       border-radius: 2px;
       font-weight: 600;
+      cursor: pointer;
+      font-size: 15px;
+    }
+    .onedrive-btn:hover {
+      background-color: #015fa7;
     }
   }
 }
 .follow_request {
   display: flex;
-  padding: 0 75px;
+  padding: 0 200px;
 
   .follow_icon {
     display: flex;
@@ -277,14 +305,19 @@ body {
 .move_top {
   display: flex;
   justify-content: flex-end;
+  margin-bottom: 50px;
+  margin-right: 20px;
   .move_top_btn {
     font-weight: 600;
     padding: 10px 12px;
     border: 0px;
     border-radius: 2px;
-    line-height: 1;
     cursor: pointer;
     font-size: 16px;
+  }
+  .move_top_btn:hover {
+    background-color: white;
+    box-shadow: 2px 2px 2px 2px gray;
   }
 }
 .footer {
@@ -292,24 +325,36 @@ body {
   .more_info {
     display: flex;
     justify-content: space-between;
-    padding: 0 75px;
+    padding: 0 200px;
     p {
       color: #616161;
       font-size: 15px;
       padding: 36px 4px 16px 8px;
       font-weight: 600;
-      line-height: 20px;
+      line-height: 10px;
     }
     ul li {
       font-size: 11px;
       padding: 8px 8px 16px 8px;
+      line-height: 8px;
     }
   }
   .base {
-    padding: 30px 75px;
+    color: #616161;
+    padding: 30px 75px 30px 200px;
     justify-content: space-between;
     font-size: 11px;
     display: flex;
+    .language {
+      display: flex;
+      a {
+        text-decoration: none;
+        color: #616161;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    }
     ul {
       display: flex;
       .bold {
@@ -318,6 +363,13 @@ body {
       li {
         padding: 0 24px 4px 0;
         justify-content: center;
+      }
+      a {
+        text-decoration: none;
+        color: #616161;
+      }
+      a:hover {
+        text-decoration: underline;
       }
     }
   }

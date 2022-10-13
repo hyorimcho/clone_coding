@@ -64,6 +64,7 @@
             <span class="material-symbols-outlined">expand_more</span>
           </a>
         </div>
+      
         <div class="search">
           <a href="javascript:void(0)"
             >검색<span class="material-symbols-outlined">search</span>
@@ -76,47 +77,25 @@
           </a>
         </div>
         <div class="login">
-          <a href="javascript:void(0)">로그인<img src="./images/svg_.svg" /></a>
+          <a href="javascript:void(0)"><div class="login_text">로그인</div>
+          <!-- <div class="login-img"><img src="./images/svg_.svg" alt=""/></div> -->
+        </a>
         </div>
       </div>
     </nav>
 
     <!--main image-->
-    <section class="main_image">
-      <!--slider main container-->
-      <div class="swiper-container">
-        <!--additional required wrapper-->
-        <div class="swiper-wrapper">
-          <!--slides-->
-          <div class="swiper-slide">
-            <img
-              src="./images/Surface-Pro8-Hero_VP5-1920x600.avif"
-              alt="surface펜으로 surface pro 8 작업하고 있는 사람"
-            />
-          </div>
-          <div class="swiper-slide">
-            <img
-              src="./images/Surface-Pro8-Hero_VP5-1920x600.avif"
-              alt="화면과 키보드가 표시된 surface laptop 4"
-            />
-          </div>
-        </div>
+    <div class="main_image">
+      <div class="main_background">
+        <img src="./images/Highlight-Surface-Pro-9-M1-Family-02-1_VP5-1920x600.avif" alt="">
       </div>
-
-      <div class="swiper-pagination">
-        <div class="swiper-prev">
-          <div class="material-symbols-outlined">arrow_back_ios</div>
-        </div>
-        <div class="swiper-next">
-          <div class="material-symbols-outlined">arrow_forward_ios</div>
-        </div>
+      <div class="inner-text">
+        <span class="badge">신제품</span>
+        <h1>Surface Pro 9</h1>
+        <p>휴대가 편리한 디바이스 한 대에서 경험하는 태블릿의 다양한 활용도와 노트북의 강력한 성능</p>
+        <button class="main-image-btn"><a href="https://www.microsoft.com/ko-kr/surface/devices/surface-pro-9?icid=mscom_marcom_H1a_SurfacePro9&FY23FallSurface#overview">자세한 내용</a></button>
       </div>
-      <div class="main-image-text">
-        <h1>Surface Pro 8</h1>
-        <p>더 커진 13인치 터치 스크린, 더 빠른 연결, 향상된 속도로 더 많은 작업을 처리하세요. 이제 Windows11과 함께 제공됩니다.</p>
-        <button class="shopping-btn">지금 쇼핑하기</button>
-      </div>
-    </section>
+    </div>
 
     <!--link-list-->
     <div class="link_list">
@@ -144,15 +123,14 @@
     <div class="card_layout">
       <div class="inner">
         <div class="card">
-          <img src="./images/asset 6.jpeg" class="card_img" alt="" />
-          <h2>Surface Laptop Studio</h2>
+          <img src="./images/Content-Card-Surface-Laptop-5-M1-Platinum-01-1.webp" class="card_img" alt="" />
+          <span class="badge">신제품</span>
+          <h2>Surface Laptop 5</h2>
           <p>
-            최고의 성능을 제공하는 Surface Laptop으로 창의력을 마음껏
-            발휘하세요. 이제 Windows 11과 함께 제공됩니다.
+            12세대 인텔® 코어와 Windows 11를 기반으로 하는 정교한 스타일과 뛰어난 멀티태스킹 속도를 경험하세요.
           </p>
           <div class="footer">
-            <a href="javascript:void(0)"
-              >지금 쇼핑하기
+            <a href="javascript:void(0)">자세한 내용
               <span class="material-symbols-outlined"> chevron_right </span>
             </a>
           </div>
@@ -202,7 +180,7 @@
     </div>
 
     <!--OneDrive-->
-    <section class="one-container">
+    <div class="one-container">
       <div class="card-background">
         <img src="./images/gldn-Soft-Hero-OneDriveCampaignRefresh-2_VP5-1596x600.avif" alt=""/>
       </div>
@@ -214,19 +192,18 @@
         </p>
         <button class="onedrive-btn">자세히 보기</button>
       </div>
-    </section>
+    </div>
 
     <!--for business-->
     <div class="business_card_layout">
       <div class="business_card_title">비즈니스용</div>
       <div class="inner">
         <div class="card">
-          <img src="./images/asset 11.webp" class="card_img" alt="" />
+          <img src="./images/Content-Card-Surface-Family-2022-M2-1.webp" class="card_img" alt="" />
           <span class="badge">신제품</span>
-          <h2>기업용 Surface Laptop Go 2</h2>
+          <h2>비즈니스용 Surface 제품군</h2>
           <p>
-              우수한 타이핑 환경, Windows 11 Pro, 전문가급 성능을 갖춘 매끄러운
-              디자인의 휴대가 편리한 노트북입니다.
+            비즈니스용 Surface를 활용하면 성공적인 업무 처리에 필요한 유연함, 기본 제공 보안 및 강력한 성능을 바탕으로 팀 고유의 방식으로 작업을 수행할 수 있습니다.
             </p>
             <div class="footer">
               <a href="javascript:void(0)"
@@ -245,7 +222,7 @@
             </p>
             <div class="footer">
               <a href="javascript:void(0)"
-                >자세한 내용
+                >자세히 보기
                 <span class="material-symbols-outlined"> chevron_right </span>
               </a>
             </div>
@@ -260,7 +237,7 @@
             </p>
             <div class="footer">
               <a href="javascript:void(0)"
-                >자세한 내용
+                >지금 쇼핑하기
                 <span class="material-symbols-outlined"> chevron_right </span>
               </a>
             </div>
@@ -275,7 +252,7 @@
             </p>
             <div class="footer">
               <a href="javascript:void(0)"
-                >자세한 내용
+                >무료로 가입하기
                 <span class="material-symbols-outlined"> chevron_right </span>
               </a>
             </div>
@@ -359,7 +336,7 @@
           </ul>
         </div>
 
-        <div class="info_4">
+        <div class="info_5">
           <p>개발자 및 IT</p>
           <ul>
             <li>개발자 센터</li>
@@ -373,7 +350,7 @@
           </ul>
         </div>
 
-        <div class="info_4">
+        <div class="info_6">
           <p>회사</p>
           <ul>
             <li>채용 정보</li>
@@ -387,19 +364,16 @@
       </div>
 
       <div class="base">
-        <a
-          ><div class="language">
-            <span class="material-symbols-outlined"> public </span>
-            한국어 (대한민국)
-          </div>
-        </a>
+        <div class="language">
+          <a href="https://www.microsoft.com/ko-kr/locale"><span class="material-symbols-outlined"> public </span> 한국어 (대한민국)</a>
+         </div>
         <ul>
-          <li>Microsoft에 문의</li>
-          <li class="bold">개인정보처리방침 및 위치정보이용약관</li>
-          <li>사용약관</li>
-          <li>상표</li>
-          <li>광고 정보</li>
-          <li>© Microsoft 2022</li>
+          <li><a href="javascript:void(0)">Microsoft에 문의</a></li>
+          <li class="bold"><a href="javascript:void(0)">개인정보처리방침 및 위치정보이용약관</a></li>
+          <li><a href="javascript:void(0)">사용약관</a></li>
+          <li><a href="javascript:void(0)">상표</a></li>
+          <li><a href="javascript:void(0)">광고 정보</a></li>
+          <li> &copy; Microsoft <span class="this-year"></span></li>
         </ul>
       </div>
     </div>

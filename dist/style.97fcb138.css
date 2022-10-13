@@ -9,6 +9,10 @@ body {
   .navigator .nav_logo {
     margin: 1px 0 0;
     padding: 16px 22px 16px 10px; }
+    .navigator .nav_logo img {
+      width: 108px;
+      height: 23px;
+      margin: -3px 0 0; }
   .navigator .menu_items {
     width: 826px;
     padding-bottom: 8px;
@@ -16,46 +20,58 @@ body {
     align-items: center;
     font-size: 13px; }
     .navigator .menu_items li {
-      padding: 16px 8px 10px; }
+      padding: 16px 14px 10px; }
       .navigator .menu_items li a {
         color: #262626;
         text-decoration: none; }
-  .navigator img {
-    width: 108px;
-    height: 23px;
-    margin: -3px 0 0; }
+    .navigator .menu_items li:hover {
+      margin-bottom: 1px;
+      text-decoration: underline 2px; }
   .navigator .actions {
     display: flex;
-    margin-left: 0; }
+    padding-left: 150px;
+    padding-top: 12px;
+    font-size: 13px; }
     .navigator .actions a {
       text-decoration: none;
       color: #262626; }
+    .navigator .actions a:hover {
+      text-decoration: underline 2px; }
     .navigator .actions .ms_all_nav {
-      font-size: 15px; }
+      padding-right: 16px; }
     .navigator .actions .shopping_cart {
-      font-size: 13px; }
+      padding-right: 16px; }
     .navigator .actions .login {
-      font-size: 13px; }
+      display: flex; }
 
 .main_image {
-  height: 700px;
-  width: 100%;
-  position: relative; }
-  .main_image .main-image-text {
-    width: 440px;
-    z-index: 1;
-    left: 200px;
-    position: absolute;
-    top: 140px;
+  height: 600px;
+  transition-duration: 1s; }
+  .main_image .main_background {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    overflow: hidden; }
+  .main_image .inner-text {
+    position: relative;
+    width: 600px;
+    left: 1150px;
+    top: -400px;
     cursor: pointer; }
-    .main_image .main-image-text h1 {
+    .main_image .inner-text .badge {
+      background-color: #ffb900;
+      display: inline-block;
+      font-weight: 600;
+      line-height: 1;
+      padding: 8px 12px; }
+    .main_image .inner-text h1 {
       font-size: 32px;
       font-weight: 600;
       margin-bottom: 20px; }
-    .main_image .main-image-text p {
+    .main_image .inner-text p {
       font-size: 16px;
       margin-bottom: 20px; }
-    .main_image .main-image-text .shopping-btn {
+    .main_image .inner-text .main-image-btn {
       outline: none;
       padding: 8px 16px;
       background-color: #0067b8;
@@ -63,19 +79,13 @@ body {
       border: 0px;
       border-radius: 2px;
       font-weight: 600;
-      cursor: pointer; }
-  .main_image .swiper-pagination {
-    bottom: 40px;
-    left: 0;
-    right: 0; }
-    .main_image .swiper-pagination .swiper-pagination-bullet {
-      width: 10px;
-      height: 10px;
-      border: 1px solid black;
-      background-color: black !important;
-      margin: 0 12px; }
-  .main_image .swiper-pagination-bullet:last-child {
-    margin-right: 0; }
+      cursor: pointer;
+      font-size: 15px; }
+      .main_image .inner-text .main-image-btn a {
+        text-decoration: none;
+        color: white; }
+    .main_image .inner-text .main-image-btn:hover {
+      background-color: #015fa7; }
 
 .link_list ul {
   display: flex;
@@ -89,42 +99,56 @@ body {
     .link_list ul li a {
       color: #0067b8; }
 
-.card_layout .inner {
-  padding: 75px;
-  display: flex;
-  justify-content: center; }
-  .card_layout .inner .card {
-    padding: 0 15px; }
-    .card_layout .inner .card h2 {
+.card_layout {
+  width: 90%;
+  height: 600px;
+  margin: 0 auto; }
+  .card_layout .inner {
+    padding: 75px;
+    display: flex;
+    justify-content: center; }
+    .card_layout .inner .card {
+      padding: 0 15px;
+      position: relative; }
+      .card_layout .inner .card .badge {
+        background-color: #ffb900;
+        display: inline-block;
+        font-weight: 600;
+        line-height: 1;
+        padding: 8px 12px;
+        position: relative; }
+      .card_layout .inner .card h2 {
+        font-size: 29px;
+        font-weight: 600;
+        margin-top: 30px; }
+      .card_layout .inner .card p {
+        line-height: 1.5; }
+      .card_layout .inner .card .footer {
+        background-color: transparent;
+        margin: 16px 0 0 0; }
+        .card_layout .inner .card .footer a {
+          text-decoration: none;
+          color: #0067b8;
+          font-weight: 700; }
+      .card_layout .inner .card .footer a :hover {
+        transform: translateX(10px);
+        transition: 0.2s; }
+  .card_layout .card_img {
+    width: 320px;
+    height: 180px; }
+    .card_layout .card_img h2 {
       font-size: 29px;
       font-weight: 600;
-      margin-top: 30px; }
-    .card_layout .inner .card p {
+      margin: 16px 0; }
+    .card_layout .card_img p {
+      font-size: 16px;
+      font-weight: 400;
       line-height: 1.5; }
-    .card_layout .inner .card .footer {
-      background-color: transparent;
-      margin: 16px 0 0 0; }
-      .card_layout .inner .card .footer a {
-        text-decoration: none;
-        color: #0067b8;
-        font-weight: 700; }
-
-.card_layout .card_img {
-  width: 320px;
-  height: 180px; }
-  .card_layout .card_img h2 {
-    font-size: 29px;
-    font-weight: 600;
-    margin: 16px 0; }
-  .card_layout .card_img p {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.5; }
-  .card_layout .card_img card {
-    margin-bottom: 16; }
 
 .business_card_layout {
-  margin: 48px; }
+  width: 90%;
+  height: 650px;
+  margin: 0 auto; }
   .business_card_layout .business_card_title {
     font-weight: 600;
     line-height: 1.2;
@@ -133,60 +157,57 @@ body {
     top: 20px;
     left: 30px; }
   .business_card_layout .inner {
-    padding: 75px;
+    padding: 75px 0 0 0;
     display: flex;
     justify-content: center; }
     .business_card_layout .inner .card {
-      padding: 0 15px; }
+      padding: 0 15px;
+      width: 320px;
+      height: 180px; }
       .business_card_layout .inner .card .badge {
         background-color: #ffb900;
         display: inline-block;
         font-weight: 600;
         line-height: 1;
         padding: 8px 12px;
-        position: relative;
-        top: 30px;
-        left: -325px; }
+        position: relative; }
+      .business_card_layout .inner .card img {
+        width: 320px;
+        height: 180px; }
       .business_card_layout .inner .card h2 {
         font-size: 29px;
         font-weight: 600;
         margin-top: 30px; }
       .business_card_layout .inner .card p {
+        font-size: 16px;
+        font-weight: 400;
         line-height: 1.5; }
       .business_card_layout .inner .card .footer {
         background-color: transparent;
         margin: 16px 0 0 0; }
         .business_card_layout .inner .card .footer a {
+          text-decoration: none;
           color: #0067b8;
-          font-weight: 700;
-          text-decoration: none; }
-  .business_card_layout .business_card {
-    display: flex; }
-    .business_card_layout .business_card .card_body {
-      display: flex;
-      width: 350px;
-      height: 440px; }
-  .business_card_layout .card_img {
-    width: 320px;
-    height: 180px; }
-  .business_card_layout h2 {
-    font-size: 29px;
-    font-weight: 600;
-    margin: 16px 0; }
-  .business_card_layout p {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.5; }
+          font-weight: 700; }
+      .business_card_layout .inner .card .card_img {
+        width: 320px;
+        height: 180px; }
+        .business_card_layout .inner .card .card_img h2 {
+          font-size: 29px;
+          font-weight: 600;
+          margin: 16px 0; }
+        .business_card_layout .inner .card .card_img p {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 1.5; }
 
 .one-container {
   position: relative;
-  cursor: pointer; }
+  cursor: pointer;
+  padding: 0 150px; }
   .one-container .card-background {
-    width: 100%;
-    margin: 0 0.013px;
-    padding: 0 75px; }
+    margin: 0 0.013px; }
   .one-container .card-text {
-    z-index: 1;
     width: 440px;
     left: 200px;
     position: absolute;
@@ -205,11 +226,15 @@ body {
       color: white;
       border: 0px;
       border-radius: 2px;
-      font-weight: 600; }
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 15px; }
+    .one-container .card-text .onedrive-btn:hover {
+      background-color: #015fa7; }
 
 .follow_request {
   display: flex;
-  padding: 0 75px; }
+  padding: 0 200px; }
   .follow_request .follow_icon {
     display: flex; }
     .follow_request .follow_icon img {
@@ -218,36 +243,49 @@ body {
 
 .move_top {
   display: flex;
-  justify-content: flex-end; }
+  justify-content: flex-end;
+  margin-bottom: 50px;
+  margin-right: 20px; }
   .move_top .move_top_btn {
     font-weight: 600;
     padding: 10px 12px;
     border: 0px;
     border-radius: 2px;
-    line-height: 1;
     cursor: pointer;
     font-size: 16px; }
+  .move_top .move_top_btn:hover {
+    background-color: white;
+    box-shadow: 2px 2px 2px 2px gray; }
 
 .footer {
   background-color: #f2f2f2; }
   .footer .more_info {
     display: flex;
     justify-content: space-between;
-    padding: 0 75px; }
+    padding: 0 200px; }
     .footer .more_info p {
       color: #616161;
       font-size: 15px;
       padding: 36px 4px 16px 8px;
       font-weight: 600;
-      line-height: 20px; }
+      line-height: 10px; }
     .footer .more_info ul li {
       font-size: 11px;
-      padding: 8px 8px 16px 8px; }
+      padding: 8px 8px 16px 8px;
+      line-height: 8px; }
   .footer .base {
-    padding: 30px 75px;
+    color: #616161;
+    padding: 30px 75px 30px 200px;
     justify-content: space-between;
     font-size: 11px;
     display: flex; }
+    .footer .base .language {
+      display: flex; }
+      .footer .base .language a {
+        text-decoration: none;
+        color: #616161; }
+      .footer .base .language a:hover {
+        text-decoration: underline; }
     .footer .base ul {
       display: flex; }
       .footer .base ul .bold {
@@ -255,6 +293,11 @@ body {
       .footer .base ul li {
         padding: 0 24px 4px 0;
         justify-content: center; }
+      .footer .base ul a {
+        text-decoration: none;
+        color: #616161; }
+      .footer .base ul a:hover {
+        text-decoration: underline; }
 
 
 /*# sourceMappingURL=/style.97fcb138.css.map */

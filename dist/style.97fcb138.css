@@ -1,9 +1,18 @@
+:root {
+  --blue: #0067b8;
+  --darkblue: #015fa7;
+  --orange: #ffb900;
+  --darkgray: #262626;
+  --lightgray: #f2f2f2;
+  --gray: #616161;
+  --white: #fff; }
+
 body {
   line-height: 1.5;
   font-weight: 400; }
 
 .navigator {
-  width: 1500px;
+  width: 1700px;
   display: flex;
   padding: 0 0 0 8%; }
   .navigator .nav_logo {
@@ -14,7 +23,7 @@ body {
       height: 23px;
       margin: -3px 0 0; }
   .navigator .menu_items {
-    width: 826px;
+    width: 70%;
     padding-bottom: 8px;
     display: flex;
     align-items: center;
@@ -22,19 +31,18 @@ body {
     .navigator .menu_items li {
       padding: 16px 14px 10px; }
       .navigator .menu_items li a {
-        color: #262626;
+        color: var(--darkgray);
         text-decoration: none; }
     .navigator .menu_items li:hover {
       margin-bottom: 1px;
       text-decoration: underline 2px; }
   .navigator .actions {
     display: flex;
-    padding-left: 150px;
     padding-top: 12px;
     font-size: 13px; }
     .navigator .actions a {
       text-decoration: none;
-      color: #262626; }
+      color: var(--darkgray); }
     .navigator .actions a:hover {
       text-decoration: underline 2px; }
     .navigator .actions .ms_all_nav {
@@ -45,59 +53,59 @@ body {
       display: flex; }
 
 .main_image {
-  height: 600px;
-  transition-duration: 1s; }
-  .main_image .main_background {
-    width: 100%;
-    height: 600px;
-    position: relative;
-    overflow: hidden; }
-  .main_image .inner-text {
-    position: relative;
-    width: 600px;
-    left: 1150px;
-    top: -400px;
-    cursor: pointer; }
-    .main_image .inner-text .badge {
-      background-color: #ffb900;
+  position: relative;
+  display: flex;
+  width: 100vw;
+  cursor: pointer; }
+  .main_image .main_background img {
+    display: block;
+    margin: 0 auto; }
+  .main_image .main_foreground .inner_text {
+    position: absolute;
+    top: 50%;
+    left: 50%; }
+    .main_image .main_foreground .inner_text .badge {
+      background-color: var(--orange);
       display: inline-block;
       font-weight: 600;
       line-height: 1;
       padding: 8px 12px; }
-    .main_image .inner-text h1 {
+    .main_image .main_foreground .inner_text h1 {
       font-size: 32px;
-      font-weight: 600;
+      font-weight: 900;
       margin-bottom: 20px; }
-    .main_image .inner-text p {
+    .main_image .main_foreground .inner_text p {
       font-size: 16px;
       margin-bottom: 20px; }
-    .main_image .inner-text .main-image-btn {
+    .main_image .main_foreground .inner_text .main-image-btn {
       outline: none;
       padding: 8px 16px;
-      background-color: #0067b8;
-      color: white;
+      background-color: var(--blue);
+      color: var(--white);
       border: 0px;
       border-radius: 2px;
       font-weight: 600;
       cursor: pointer;
       font-size: 15px; }
-      .main_image .inner-text .main-image-btn a {
+      .main_image .main_foreground .inner_text .main-image-btn a {
         text-decoration: none;
-        color: white; }
-    .main_image .inner-text .main-image-btn:hover {
-      background-color: #015fa7; }
+        color: var(--white); }
+    .main_image .main_foreground .inner_text .main-image-btn:hover {
+      background-color: var(--darkblue); }
 
-.link_list ul {
-  display: flex;
-  padding: 60px 75px;
-  justify-content: center; }
-  .link_list ul li {
-    margin: 16px 24px;
-    font-weight: 600; }
-    .link_list ul li .link-img {
-      text-align: center; }
-    .link_list ul li a {
-      color: #0067b8; }
+.link_list {
+  margin: 0 auto; }
+  .link_list ul {
+    display: flex;
+    padding: 60px 75px;
+    justify-content: center; }
+    .link_list ul li {
+      margin: 16px 24px;
+      font-weight: 600; }
+      .link_list ul li .link-img {
+        text-align: center; }
+      .link_list ul li a {
+        color: var(--blue); }
 
 .card_layout {
   width: 90%;
@@ -111,7 +119,7 @@ body {
       padding: 0 15px;
       position: relative; }
       .card_layout .inner .card .badge {
-        background-color: #ffb900;
+        background-color: var(--orange);
         display: inline-block;
         font-weight: 600;
         line-height: 1;
@@ -128,7 +136,7 @@ body {
         margin: 16px 0 0 0; }
         .card_layout .inner .card .footer a {
           text-decoration: none;
-          color: #0067b8;
+          color: var(--blue);
           font-weight: 700; }
       .card_layout .inner .card .footer a :hover {
         transform: translateX(10px);
@@ -165,7 +173,7 @@ body {
       width: 320px;
       height: 180px; }
       .business_card_layout .inner .card .badge {
-        background-color: #ffb900;
+        background-color: var(--orange);
         display: inline-block;
         font-weight: 600;
         line-height: 1;
@@ -187,7 +195,7 @@ body {
         margin: 16px 0 0 0; }
         .business_card_layout .inner .card .footer a {
           text-decoration: none;
-          color: #0067b8;
+          color: var(--blue);
           font-weight: 700; }
       .business_card_layout .inner .card .card_img {
         width: 320px;
@@ -203,10 +211,9 @@ body {
 
 .one-container {
   position: relative;
-  cursor: pointer;
-  padding: 0 150px; }
-  .one-container .card-background {
-    margin: 0 0.013px; }
+  cursor: pointer; }
+  .one-container .card-background img {
+    margin: 0 auto; }
   .one-container .card-text {
     width: 440px;
     left: 200px;
@@ -222,24 +229,26 @@ body {
     .one-container .card-text .onedrive-btn {
       outline: none;
       padding: 8px 16px;
-      background-color: #0067b8;
-      color: white;
+      background-color: var(--blue);
+      color: var(--white);
       border: 0px;
       border-radius: 2px;
       font-weight: 600;
       cursor: pointer;
       font-size: 15px; }
     .one-container .card-text .onedrive-btn:hover {
-      background-color: #015fa7; }
+      background-color: var(--darkblue); }
 
 .follow_request {
   display: flex;
   padding: 0 200px; }
-  .follow_request .follow_icon {
+  .follow_request ul {
     display: flex; }
-    .follow_request .follow_icon img {
-      width: 32px;
-      height: 32px; }
+    .follow_request ul li {
+      padding: 0 8px; }
+      .follow_request ul li img {
+        width: 32px;
+        height: 32px; }
 
 .move_top {
   display: flex;
@@ -254,17 +263,17 @@ body {
     cursor: pointer;
     font-size: 16px; }
   .move_top .move_top_btn:hover {
-    background-color: white;
+    background-color: var(--white);
     box-shadow: 2px 2px 2px 2px gray; }
 
 .footer {
-  background-color: #f2f2f2; }
+  background-color: var(--lightgray); }
   .footer .more_info {
     display: flex;
     justify-content: space-between;
     padding: 0 200px; }
     .footer .more_info p {
-      color: #616161;
+      color: var(--gray);
       font-size: 15px;
       padding: 36px 4px 16px 8px;
       font-weight: 600;
@@ -274,7 +283,7 @@ body {
       padding: 8px 8px 16px 8px;
       line-height: 8px; }
   .footer .base {
-    color: #616161;
+    color: var(--gray);
     padding: 30px 75px 30px 200px;
     justify-content: space-between;
     font-size: 11px;
@@ -283,7 +292,7 @@ body {
       display: flex; }
       .footer .base .language a {
         text-decoration: none;
-        color: #616161; }
+        color: var(--gray); }
       .footer .base .language a:hover {
         text-decoration: underline; }
     .footer .base ul {
@@ -295,7 +304,7 @@ body {
         justify-content: center; }
       .footer .base ul a {
         text-decoration: none;
-        color: #616161; }
+        color: var(--gray); }
       .footer .base ul a:hover {
         text-decoration: underline; }
 

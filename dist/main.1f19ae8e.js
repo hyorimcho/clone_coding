@@ -133,6 +133,27 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 // });
 var thisYear = document.querySelector('.this-year');
 thisYear.textContent = new Date().getFullYear();
+var moveTopBtn = document.querySelector('.move_top');
+
+var btnVisible = function btnVisible() {
+  // if (window.scrollY > 500) {
+  //   moveTopBtn.style.display = 'block';
+  // } else {
+  //   moveTopBtn.style.display = 'none';
+  // }
+  window.scrollY > 500 ? moveTopBtn.style.display = 'block' : moveTopBtn.style.display = 'none';
+};
+
+document.addEventListener('scroll', btnVisible);
+
+var moveTop = function moveTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+};
+
+moveTopBtn.addEventListener('click', moveTop);
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -161,7 +182,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62458" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57827" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

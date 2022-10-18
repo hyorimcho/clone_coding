@@ -10,10 +10,10 @@
 * {
   box-sizing: border-box;
 }
-
 body {
   line-height: 1.5;
   font-weight: 400;
+  overflow-x: hidden;
 }
 .container {
   max-width: 1440px;
@@ -83,7 +83,6 @@ body {
 .main_image {
   .container {
     max-width: 1920px;
-    height: 600px;
     // background: url('./images/Highlight-Surface-Pro-9-M1-Family-02-1_VP5-1920x600.avif')
     //   no-repeat;
     // background-size: cover;
@@ -312,7 +311,7 @@ body {
     left: 25%;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translate(-40%, -50%);
     h1 {
       font-size: 32px;
       font-weight: 600;
@@ -355,10 +354,13 @@ body {
   }
 }
 .move_top {
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 50px;
+  position: fixed;
+  display: none;
+  // justify-content: flex-end;
   margin-right: 20px;
+  text-align: center;
+  bottom: 16px;
+  right: 20px;
   .move_top_btn {
     font-weight: 600;
     padding: 10px 12px;
@@ -402,6 +404,9 @@ body {
       a {
         text-decoration: none;
         color: var(--gray);
+        display: flex;
+        align-items: center;
+        gap: 5px;
       }
       a:hover {
         text-decoration: underline;

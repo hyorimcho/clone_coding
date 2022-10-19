@@ -219,7 +219,8 @@
     "yargs-parser": "^20.2.9"
   },
   "scripts": {
-    "dev": "parcel index.html"
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "repository": {
     "type": "git",

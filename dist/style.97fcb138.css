@@ -78,6 +78,7 @@ body {
     .main_image .container .main_foreground .inner_text h1 {
       font-size: 32px;
       font-weight: 900;
+      margin-top: 8px;
       margin-bottom: 16px; }
     .main_image .container .main_foreground .inner_text p {
       font-size: 16px;
@@ -107,12 +108,12 @@ body {
     padding: 60px 75px;
     justify-content: center; }
     .link_list ul li {
-      margin: 16px 24px;
-      font-weight: 600; }
+      margin: 16px 24px; }
       .link_list ul li .link-img {
         text-align: center; }
       .link_list ul li a {
-        color: var(--blue); }
+        color: var(--blue);
+        font-weight: 700; }
 
 .card_layout {
   height: 500px; }
@@ -131,7 +132,7 @@ body {
         position: relative; }
       .card_layout .inner .card h2 {
         font-size: 29px;
-        font-weight: 600;
+        font-weight: 700;
         margin-top: 30px; }
         .card_layout .inner .card h2.first {
           margin-top: 0; }
@@ -191,7 +192,7 @@ body {
         height: 180px; }
       .business_card_layout .inner .card h2 {
         font-size: 29px;
-        font-weight: 600;
+        font-weight: 700;
         margin-top: 30px; }
         .business_card_layout .inner .card h2.first {
           margin-top: 0; }
@@ -208,6 +209,11 @@ body {
           text-decoration: none;
           color: var(--blue);
           font-weight: 700; }
+      .business_card_layout .inner .card .footer a:hover {
+        transition: transform 0.2s ease-in;
+        text-decoration: underline; }
+        .business_card_layout .inner .card .footer a:hover span {
+          transform: translateX(10px); }
       .business_card_layout .inner .card .card_img {
         width: 320px;
         height: 180px; }
@@ -233,7 +239,7 @@ body {
     transform: translate(-40%, -50%); }
     .one-container .card-text h1 {
       font-size: 32px;
-      font-weight: 600;
+      font-weight: 800;
       margin-bottom: 20px; }
     .one-container .card-text p {
       font-size: 16px;

@@ -19,4 +19,5 @@ const moveTop = () => {
 moveTopBtn.addEventListener('click', moveTop);
 
 const thisYear = document.querySelector('.this-year');
+//new Date()의 객체의 getFullYear()를 활용해 동적으로 가져온 년도 데이터를 thisYear에 추가한다.
 thisYear.textContent = new Date().getFullYear();
